@@ -1,0 +1,273 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+#todo-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Input Container */
+#input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#todo-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Edit Input (inline in task list) */
+input.edit-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #3498db;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: #3498db;
+}
+
+/* Add Button */
+#add-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+#add-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Delete Button */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #bbb;
+  border-radius: 4px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+li:hover .icon-btn {
+  opacity: 1;
+}
+
+.icon-btn:hover {
+  color: #e74c3c;
+  background-color: #fdecea;
+}
+
+/* List Container */
+#list-container {
+  margin-bottom: 10px;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Empty State */
+#empty-message {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  padding: 20px 0;
+  display: none;
+}
+
+/* List Items */
+li {
+  padding: 12px 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background-color: #f0f7ff;
+}
+
+/* Task Text */
+li span {
+  flex: 1;
+  word-wrap: break-word;
+  font-size: 14px;
+  cursor: text;
+  border-radius: 3px;
+  padding: 2px 4px;
+  transition: background-color 0.15s;
+}
+
+li span:hover {
+  background-color: #e8f4fd;
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Task Counter */
+#task-count {
+  font-size: 13px;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* Filter Buttons */
+#filter-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #555;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.filter-btn.active {
+  border-color: #3498db;
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Clear Completed Button */
+#clear-completed {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #e74c3c;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+#clear-completed:hover {
+  background-color: #fdecea;
+}
+
+/* TABLET (768px and below) */
+@media (max-width: 768px) {
+  #todo-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+  }
+}
+
+/* MOBILE (480px and below) */
+@media (max-width: 480px) {
+  #todo-container {
+    width: 95%;
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  #input-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  li {
+    padding: 10px 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li span {
+    flex-basis: 100%;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #filter-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  #clear-completed {
+    align-self: center;
+  }
+}
