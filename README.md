@@ -17,5 +17,5 @@ A to-do list app built with plain HTML, CSS, and JavaScript — no frameworks, n
 
 ## What I learned
 
-This project was focused on understanding the fundamentals — DOM manipulation, event handling, and managing state manually without a framework. I later rebuilt it in React to see how the two approaches compare: [To-Do List (React)]([https://github.com/jameschibueze25-ux/to-do-list-react](https://github.com/jameschibueze25-ux/todo-list-react))
+This project was focused on understanding the fundamentals — DOM manipulation, event handling, and managing state manually without a framework. I later rebuilt it in React to see how the two approaches compare: https://github.com/jameschibueze25-ux/todo-list-react
 
